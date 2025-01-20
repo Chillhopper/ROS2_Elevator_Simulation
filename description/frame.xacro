@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:macro name="frame" params="">
+    <link name="frame_1">
+      <visual>
+        <geometry>
+          <cylinder length="2" radius="0.05"/>
+        </geometry>
+        <material name="blue"/>
+      </visual>
+      <collision>
+        <geometry>
+          <cylinder length="2" radius="0.05"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <mass value="0.5"/> <!-- Adjust mass as needed -->
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <inertia ixx="0.0042" ixy="0.0" ixz="0.0" iyy="0.0042" iyz="0.0" izz="0.0417"/>
+      </inertial>
+    </link>
+    
+    <link name="frame_2">
+      <visual>
+        <geometry>
+          <cylinder length="2" radius="0.05"/>
+        </geometry>
+        <material name="blue"/>
+      </visual>
+      <collision>
+        <geometry>
+          <cylinder length="2" radius="0.05"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <mass value="0.5"/> <!-- Adjust mass as needed -->
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <inertia ixx="0.0042" ixy="0.0" ixz="0.0" iyy="0.0042" iyz="0.0" izz="0.0417"/>
+      </inertial>
+    </link>
+
+    <!-- Joints for Frame -->
+    <joint name="frame_1_joint" type="fixed">
+      <parent link="base_link"/>
+      <child link="frame_1"/>
+      <origin xyz="0.4 0.4 1" rpy="0 0 0"/>
+    </joint>
+
+    <joint name="frame_2_joint" type="fixed">
+      <parent link="base_link"/>
+      <child link="frame_2"/>
+      <origin xyz="0.4 -0.4 1" rpy="0 0 0"/>
+    </joint>
+  </xacro:macro>
+</robot>

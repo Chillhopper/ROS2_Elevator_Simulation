@@ -1,0 +1,21 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 50
+    joint_position_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+      joints:
+        - elevator_joint
+      state_publish_rate: 50
+      action_monitor_rate: 10
+      constraints:
+        goal_time: 0.5
+        stopped_velocity_tolerance: 0.01
+        elevator_joint:
+          trajectory: 0.05
+          goal: 0.01
+      gains:
+        elevator_joint:
+          p: 10.0
+          i: 0.0
+          d: 1.0
+

@@ -1,0 +1,31 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+    Property Tree Widget:
+      Expanded: ~
+  - Class: rviz_common/Views
+    Name: Views
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Name: Global Options
+      Class: rviz_common/GlobalOptions
+      Grid:
+        Cell Size: 1
+        Color: 160; 160; 160
+      Fixed Frame: base_link
+    - Name: RobotModel
+      Class: rviz_default_plugins/RobotModel
+      Description Topic: /robot_description
+      Robot Description: /robot_description
+      TF Prefix: ""
+    - Name: TF
+      Class: rviz_default_plugins/TF
+  Tools: []
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Focal Point: 0; 0; 1
+      Distance: 5
+      Pitch: 0.785
+

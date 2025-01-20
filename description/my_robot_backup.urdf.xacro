@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="my_bot">
+
+  <material name="gray">
+    <color rgba="0.5 0.5 0.5 1"/>
+  </material>
+  <material name="blue">
+    <color rgba="0.0 0.0 1.0 1"/>
+  </material>
+  <material name="red">
+    <color rgba="1.0 0.0 0.0 1"/>
+  </material>
+  
+  <xacro:include filename="ros2_control.xacro"/>
+  <xacro:include filename="base_link.xacro"/>
+  <xacro:include filename="frame.xacro"/>
+  <xacro:include filename="elevator.xacro"/>
+
+  <xacro:ros2_control/>
+  <xacro:base_link/> 
+  <xacro:frame/> 
+  <xacro:elevator/> 
+
+  <!-- Gazebo Plugins -->
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so"/>
+  </gazebo>
+
+</robot>
+

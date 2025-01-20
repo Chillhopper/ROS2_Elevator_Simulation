@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:macro name="base_link" params="">
+    <link name="base_link">
+      <visual>
+        <geometry>
+          <box size="1 1 0.1"/>
+        </geometry>
+        <material name="gray"/>
+      </visual>
+      <collision>
+        <geometry>
+          <box size="1 1 0.1"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <mass value="1.0"/> <!-- Mass in kilograms -->
+        <origin xyz="0 0 0" rpy="0 0 0"/> <!-- Center of mass -->
+        <inertia ixx="0.1" ixy="0.0" ixz="0.0" iyy="0.1" iyz="0.0" izz="0.1"/> <!-- Moment of inertia -->
+      </inertial>
+    </link>
+  </xacro:macro>
+</robot>
