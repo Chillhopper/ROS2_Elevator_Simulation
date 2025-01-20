@@ -1,7 +1,7 @@
 # ROS2 Elevator Simulation
 
 ##  Description
-This is a ROS 2 (Humble) simulation package for an **elevator system** using Gazebo and RViz. It models a simple elevator with a prismatic joint and allows control through ROS 2 topics.
+This is a ROS 2 (Humble) simulation package for an **elevator system** using Gazebo, RViz and gazebo_ros2_control plug-in. It models a simple elevator with a prismatic joint and allows control through ROS 2 topics.
 
 ![image](https://github.com/user-attachments/assets/35bd1f32-5a3a-4513-811a-b854403af22f)
 ![image](https://github.com/user-attachments/assets/4616104d-5f80-43b4-b918-23bb424034b3)
